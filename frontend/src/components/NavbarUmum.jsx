@@ -19,18 +19,18 @@ export default function UmumNavbar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gradient-to-b from-[#191970] to-[#000000] text-white w-64 transform ${
+        className={`fixed top-0 left-0 h-full bg-gradient-to-b from-[#000000] to-[#191970] text-white w-64 transform ${
           open ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out shadow-xl z-40`}
       >
         {/* Header */}
         <div className="px-6 py-4 border-b border-gray-700">
-            <img src="/logo192.png" alt="Logo" className="w-16 h-16" />
+            <img src="/image/logo1.png" alt="Logo" className="h-16" />
         </div>
 
         {/* Menu Items */}
         <ul className="px-4 py-6 space-y-4 text-lg">
-          <li className="hover:text-blue-300 cursor-pointer transition">
+          <li className="bg-blue-900 hover:bg-blue-300 hover:text-black hover:font-semibold cursor-pointer transition px-4 py-2 rounded">
             Announcements
           </li>
 
@@ -38,16 +38,16 @@ export default function UmumNavbar() {
           <li>
             <button
               onClick={() => setOpenCategory(!openCategory)}
-              className="flex justify-between items-center w-full hover:text-blue-300 transition"
+              className="flex justify-between items-center w-full bg-blue-900 hover:bg-blue-300 hover:text-black hover:font-semibold cursor-pointer transition px-4 py-2 rounded"
             >
               <span>Category</span>
               {openCategory ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
             </button>
 
             {openCategory && (
-              <ul className="mt-2 ml-4 space-y-2 text-base text-gray-300">
-                <li className="hover:text-blue-200 cursor-pointer">CPNS</li>
-                <li className="hover:text-blue-200 cursor-pointer">BUMN</li>
+              <ul className="mt-2 ml-4 mt-5 space-y-2 text-base text-gray-300">
+                <li className="px-2 py-1 bg-blue-950 hover:bg-blue-300 hover:text-black hover:font-semibold text-xl cursor-pointer rounded">CPNS</li>
+                <li className="px-2 py-1 bg-blue-950 hover:bg-blue-300 hover:text-black hover:font-semibold text-xl cursor-pointer rounded">BUMN</li>
               </ul>
             )}
           </li>

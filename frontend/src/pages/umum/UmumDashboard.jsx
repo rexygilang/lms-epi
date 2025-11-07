@@ -6,7 +6,7 @@ export default function UmumDashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false); // track sidebar state
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#6472a6] to-[#7b90bd] text-white">
+    <div className="min-h-screen bg-white text-white">
       {/* Sidebar Navbar */}
       <UmumNavbar open={sidebarOpen} setOpen={setSidebarOpen} />
 
@@ -16,12 +16,12 @@ export default function UmumDashboard() {
         style={{ marginLeft: sidebarOpen ? "16rem" : "0" }} // geser konten sesuai sidebar
       >
         {/* Kotak konten utama */}
-        <div className="bg-white rounded-lg p-8 space-y-6 shadow-lg text-[#191970]">
+        <div className="bg-blue-900 rounded-lg p-8 space-y-6 shadow-lg text-[#191970]">
           {/* Header login */}
           <div className="flex items-center justify-between mb-6">
-            <div className="text-2xl font-bold">Learning Management System</div>
+              <img src="/image/logoepi.png" alt="Logo" className="h-16 bg-[#6472a6]" />
             <div className="flex space-x-4 items-center">
-              <div className="flex items-center bg-white/10 rounded-md px-3 py-2 border">
+              <div className="flex items-center bg-white rounded-md px-3 py-2 border">
                 <User className="mr-2" size={20} />
                 <input
                   type="text"
@@ -29,7 +29,7 @@ export default function UmumDashboard() {
                   className="bg-transparent placeholder-[#191970] focus:outline-none text-[#191970]"
                 />
               </div>
-              <div className="flex items-center bg-white/10 rounded-md px-3 py-2 border">
+              <div className="flex items-center bg-white rounded-md px-3 py-2 border">
                 <Lock className="mr-2" size={20} />
                 <input
                   type="password"
@@ -44,24 +44,21 @@ export default function UmumDashboard() {
           <hr className="border-t border-[#191970]" />
 
               {/* Navbar bawah header */}
-              <div className="flex items-center font-medium bg-[#191970] text-[#ffffff] rounded-md px-4 py-2">
+              <div className="flex items-center font-medium bg-[#ffffff] text-[#191970] rounded-md px-4 py-2">
                 <a href="#" className="px-4 hover:text-blue-400 hover:underline">Patriortik</a>
                 <div className="border-l border-gray-300 h-6"></div> {/* garis pemisah */}
                 <a href="#" className="px-4 hover:text-blue-400 hover:underline">Contact</a>
               </div>
-
-                    {/* Konten horizontal scroll (LMS info) */}
-                    {/* Konten horizontal scroll (LMS info) */}
           <div className="flex space-x-6 overflow-x-auto mt-6 py-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
             {/* Item 1 */}
             <div className="min-w-[250px] bg-white rounded-md shadow-md flex-shrink-0">
               <img 
-                src="/images/bimbel.jpg" 
+                src="/image/logo.jpeg" 
                 alt="Tempat Bimbel" 
                 className="w-full h-32 object-cover rounded-t-md"
               />
               <div className="p-4 text-[#191970]">
-                <h3 className="font-semibold text-lg mb-2">Tempat Bimbel</h3>
+                <h3 className="font-semibold text-lg mb-2">Edukasi Patriot Indonesia</h3>
                 <p className="text-sm">
                   Lokasi bimbel nyaman dan strategis untuk semua siswa.
                 </p>
