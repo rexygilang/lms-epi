@@ -6,9 +6,20 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import LoginPage from "./pages/Dashboard";
 import AdminDashboard from "./pages/admin/Dashboard";
 import UmumDashboard from "./pages/umum/UmumDashboard";
+import Konten from "./pages/umum/Konten";
 
-export default function App() {
+function App() {
   return (
-    <UmumDashboard/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<UmumDashboard />} />
+
+        <Route path="/konten" element={<Konten />} />
+        <Route path="/login" element={<GuruDashboard />} />
+      </Routes>
+    </Router>
   );
 }
+
+
+export default App;

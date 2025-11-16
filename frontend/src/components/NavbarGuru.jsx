@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
-export default function UmumNavbar() {
+export default function GuruNavbar() {
   const [open, setOpen] = useState(false);
   const [openCategory, setOpenCategory] = useState(false);
 
@@ -25,17 +26,19 @@ export default function UmumNavbar() {
       >
         {/* Header */}
         <div className="px-6 py-4 border-b border-gray-700">
+          <Link to="/" className="block">
             <img src="/image/logo1.png" alt="Logo" className="h-16" />
+          </Link>
         </div>
 
         {/* Menu Items */}
-        <ul className="px-4 py-6 space-y-4 text-lg">
+        <ul className="px-4 py-6 space-y-5 text-lg">
           <li className="bg-blue-900 hover:bg-blue-300 hover:text-black hover:font-semibold cursor-pointer transition px-4 py-2 rounded">
-            Announcements
+            Dashboard
           </li>
 
           {/* Category dengan submenu */}
-          <li>
+          {/* <li>
             <button
               onClick={() => setOpenCategory(!openCategory)}
               className="flex justify-between items-center w-full bg-blue-900 hover:bg-blue-300 hover:text-black hover:font-semibold cursor-pointer transition px-4 py-2 rounded"
@@ -50,7 +53,8 @@ export default function UmumNavbar() {
                 <li className="px-2 py-1 bg-blue-950 hover:bg-blue-300 hover:text-black hover:font-semibold text-xl cursor-pointer rounded">BUMN</li>
               </ul>
             )}
-          </li>
+          </li> */}
+          <li className="bg-blue-900 hover:bg-blue-300 hover:text-black hover:font-semibold cursor-pointer transition px-4 py-2 rounded">Courses</li>
         </ul>
       </div>
     </>
